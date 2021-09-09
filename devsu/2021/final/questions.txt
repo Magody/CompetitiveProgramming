@@ -1,0 +1,259 @@
+Pregunta 1 - 100 PUNTOS - Peso: 5%
+
+1. Greater area between Bars
+
+Let bars be an array of positive integers where each element represents the height of a bar in a bar chart. Find the maximum area between all the rectangles that can be formed between two bars and the x-axis. The separation between any two consecutive bars is 3 and the height of a rectangle is given by the minimum height of the two bars that limit the rectangle.
+
+Example 1:
+
+Input:
+
+bars = [1,1,1,3]
+
+Output:
+
+9
+
+Explanation:
+
+The maximum area is given by the first and the last elements. The rectangle formed has a width of 9 and a height of 1, resulting in an area of 9.
+
+Example 2:
+
+Input:
+
+bars=[3,1,3,1]
+
+Output:
+
+18
+
+Explanation:
+
+The rectangle with the maximum area is limited by the first and third elements. Its width is 6 and height is 3, which gives an area of 18.
+
+Constraints:
+
+    1<=bars[i]<=100
+    2<=bars.length <=500
+
+Pregunta 2 - 100 PUNTOS - Peso: 8%
+
+2. Jumping Frog
+
+A frog is jumping over leaves on a swamp. The leaves are positioned one after another in a kind of line. Given an array jumps of integers representing the maximum number of jumps the frog can perform on a particular leaf to the next leaves, determine if the frog can reach the last leaf. Return true if it is possible or false otherwise.
+
+Example 1:
+
+Input:
+
+jumps=[3,1,1,1]
+
+Output:
+
+true
+
+Explanation:
+
+There are many ways the frog can reach the last leaf. The first option is jumping directly from leaf 0 to leaf 3 (skipping leaves 1 and 2). The second option is jumping on each leaf once from leaf 0 to the last one. The third option is jumping from leaf 0 to leaf 2 (skipping leaf 1), and then from leaf 2 to the last one.
+
+Example 2:
+
+Input:
+
+jumps=[1,0,1]
+
+Output:
+
+false
+
+Explanation:
+
+Because from leaf 0 the frog can jump only to leaf 1 and from leaf 1 it can’t jump, there is no way to reach the last leaf.
+
+Constraints:
+
+    1 <= jumps.length <= 500
+    0 <= jumps[i] <= 10
+
+Type true or false using lowercase letters.
+
+Pregunta 3 - 100 PUNTOS - Peso: 15%
+
+3. Points Maximizer
+
+Let rooms be an array of integers where every element represents the points available in a specific room. Find the maximum sum of points from all the rooms with the condition that you cannot add up points from two adjacent rooms. The first and the last room are also adjacent.
+
+Example 1:
+
+Input:
+
+rooms=[1,2]
+
+Output:
+
+2
+
+Explanation:
+
+You can add points only from one of the two rooms as they are adjacent. The maximum sum is 2.
+
+Example 2:
+
+Input:
+
+rooms=[2,1,3]
+
+Output:
+
+3
+
+Explanation:
+
+You can sum points only from one room. The maximum sum is 3.
+
+Example 3:
+
+Input:
+
+rooms=[1,2,7,4,2]
+
+Output:
+
+9
+
+Explanation:
+
+The rooms you can consider are at the positions (0, 2), (0, 3), (1, 3), (1, 4) and (2, 4). The maximum sum is 9 and it is given by the rooms at (2, 4).
+
+Constraints:
+
+    1 <= rooms.length <= 100
+    0 <= rooms[i] <= 100
+
+Pregunta 4 - 0 PUNTOS - Peso: 18%
+
+4. Characters selection
+
+You are preparing yourself for an important tournament of your favorite MOBA game. You have data of the n characters you play most. The data includes two dimensions: damage and victories. You want to know the maximum momentum given by at most c characters from the whole list.
+
+The momentum is defined as the sum of the damage multiplied by the minimum number of victories among all selected characters.
+
+As the result can be a big number, return it as modulo 10^9 + 7.
+
+Example 1:
+
+Inputs:
+
+    damage=[1,1,1,1]
+    victories=[10,10,10,10]
+    c = 2
+
+Output:
+
+20
+
+Explanation:
+
+If you take only one character, the momentum is 10. If you take two, any pair gives a momentum of (1 + 1) * 10 = 20. So, the maximum momentum is 20.
+
+Example 2:
+
+Inputs:
+
+    damage=[1,2,3,4]
+    victories=[4,3,2,1]
+    c = 3
+
+Output:
+
+12
+
+Explanation:
+
+If you take one character, the maximum momentum is 6 (second or third character). If you take two characters, the maximum momentum is 10 (second and third characters). For 3 characters, there are four ways you can select them:
+
+    (1st, 2nd, 3rd), with a momentum = (1 + 2 + 3) * 2 = 12
+    (1st, 2nd, 4th), with a momentum = (1 + 2 + 4) * 1 = 7
+    (1st, 3rd, 4th), with a momentum = (1 + 3 + 4) * 1 = 8
+    (2nt, 3rd, 4th), with a momentum = (2 + 3 + 4) * 1 = 9
+
+Therefore, the maximum momentum is 12.
+
+Constraints:
+
+    n = damage.length = victories.length = total number of characters
+    1 <= c <= n <= 1000
+    1 <= damage[i] <= 10000
+    1 <= victories[i] <= 10000
+
+Pregunta 5 - 0 PUNTOS - Peso: 23%
+
+5. Unique ways
+
+Let source and target be two strings. Obtain the number of all the distinct ways you can generate target from source by ignoring or removing zero or more characters (without swapping them).
+
+Example 1:
+
+Input:
+
+source = doggdog
+
+target = dog
+
+Output:
+
+5
+
+Explanation:
+
+Here, the considered characters for each way are the ones in parenthesis and the ignored or removed characters are not in parenthesis. The unique ways to generate target from source are:
+
+    (dog)gdog
+    (do)g(g)dog
+    (do)ggdo(g)
+    (d)oggd(og)
+    dogg(dog)
+
+Constraints:
+
+    1 <= source.length, target.length <= 500
+    Source and target contains only English lowercase letters.
+
+Pregunta 6 - 0 PUNTOS - Peso: 31%
+
+6. Candy Crush Array
+
+Let numbers be an array of integers. Return the maximum score you can get after iterating through and removing similar contiguous elements in each iteration.
+
+You can remove elements one by one or you can remove multiple continuous similar elements.
+
+Every time you remove n contiguous elements (n >= 1), the score should be increased in n^2 units.
+
+Example 1:
+
+Input:
+
+numbers = [1,2,1,3,1]
+
+Output:
+
+11
+
+Explanation:
+
+There are some ways you can remove elements. One of them is removing one element at a time from right to left:
+
+    Start: [1,2,1,3,1], score = 0
+    Iteration 1: [1,2,1,3], score = 1^2 = 1
+    Iteration 2: [1,2,1], score = 1 + 1^2 = 2
+    Iteration 3: [1,2], score = 2 + 1^2 = 3
+    Iteration 4: [1], score = 3 + 1^2 = 4
+    Iteration 5: [], score = 4 + 1^2 = 5
+
+But the way that maximizes the score is removing 2 and 3 first and then the three contiguous 1s like so:
+
+    Start: [1,2,1,3,1], score = 0
+    Iteration 1: [1,1,3,1], score = 1^2 = 1
+    Iteration 2: [1,1,1], score = 1 + 1^2 = 2
+    Iteration 3: [], score = 2 + 3^2 = 11
