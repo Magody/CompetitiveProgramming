@@ -15,6 +15,7 @@ bool debug = true;
 
 int main()
 {
+    
     std::cout.precision(std::numeric_limits<cpp_int>::max_digits10);
 
 

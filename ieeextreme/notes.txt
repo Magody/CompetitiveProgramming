@@ -1,0 +1,1 @@
+gotta_catch_em_all.cpp.- La razón por la que usar árboles no es óptimo es porque en algún punto la suma llega a cero pero el árbol sigue sumando, por eso se debe usar otra técnica.
