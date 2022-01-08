@@ -31,8 +31,7 @@ def solve():
         j = j - 1
 
     for i in memo:
-        if memo[i]["left_qs"] != 0 and memo[i]["right_qs"] != 0:
-            count = count + max(memo[i]["left_qs"], memo[i]["right_qs"])
+        count = count + memo[i]["left_qs"] * memo[i]["right_qs"]
 
     print(count)
 
