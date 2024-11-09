@@ -1,3 +1,0 @@
-Gabriel Cáceres: Siempre que es máximo o mínimo se puede hacer por árboles y optimizar.
-Alex padilla: Usar logaritmos cuando algo se expande exponencialmente.
-
